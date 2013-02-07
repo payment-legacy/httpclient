@@ -1,0 +1,21 @@
+{
+    "name": "payment/httpclient",
+    "type": "interface",
+    "description": "http client interface",
+    "keywords": ["http client"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Dominik Zogg",
+            "email": "dominik.zogg@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3"
+    },
+    "autoload": {
+        "psr-0": { "Payment\\HttpClient\\": "" }
+    },
+    "target-dir": "Payment/HttpClient",
+    "minimum-stability": "dev"
+}
