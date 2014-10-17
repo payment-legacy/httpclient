@@ -29,6 +29,23 @@ class NullResponse implements ResponseInterface
         $this->statusCode = $statusCode;
         $this->contentType = $contentType;
         $this->content = $content;
+        $this->setHeaders($headers);
+    }
+
+    /**
+     * @param array $rawHeaders
+     */
+    protected function setHeaders(array $rawHeaders)
+    {
+        $headers = array();
+        foreach($rawHeaders as $i => $rawHeader) {
+            if(is_string($i)) {
+                $headers[$i] = $rawHeader;
+            } elseif(false !== $pos = strpos($rawHeader, ':')) {
+                $headers[substr($rawHeader, 0, $pos)] = trim(substr($rawHeader, $pos + 1));
+            }
+        }
+
         $this->headers = $headers;
     }
 
