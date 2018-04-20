@@ -17,5 +17,6 @@
         "psr-0": { "Payment\\HttpClient\\": "" }
     },
     "target-dir": "Payment/HttpClient",
-    "minimum-stability": "dev"
+    "minimum-stability": "dev",
+    "abandoned": true
 }
